@@ -1,13 +1,15 @@
-# Cleanfolio Minimal
+# EasyLearn Website
 
-A portfolio template built with HTML, CSS, and JavaScript.
+Welcome to the **EasyLearn** front-end website!  
+This is a simple, responsive, and static website built with **HTML, CSS, and JavaScript**, designed to introduce our company and services.
 
-## Preview
+## 🚀 Features
 
-[![imgur](https://i.imgur.com/5z7cvMz.gif)](https://rjshkhr.github.io/cleanfolio-minimal)
+- Clean and minimal design
+- Responsive layout for desktop and mobile
+- Informational sections about EasyLearn
+- Contact information for inquiries
 
-[Live Demo](https://rjshkhr.github.io/cleanfolio-minimal)
+## 🌐 Live Preview
 
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+[https://jelly13124.github.io/easylearn-website/](https://jelly13124.github.io/easylearn-website/)
