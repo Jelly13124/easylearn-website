@@ -114,3 +114,9 @@ window.saveChanges = () => {
   URL.revokeObjectURL(url);
 };
 
+document.querySelectorAll('.wechat-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    alert('请加微信Jelly2474');
+  });
+});
+
