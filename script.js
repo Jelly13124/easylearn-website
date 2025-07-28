@@ -61,3 +61,56 @@ const scrollUp = () => {
 }
 
 document.addEventListener('scroll', scrollUp)
+
+// ========== Developer Mode ==========
+let devMode = false;
+
+
+window.toggleDevMode = () => {
+  devMode = !devMode;
+  document.querySelectorAll('.editable').forEach(el => {
+    el.setAttribute('contenteditable', devMode);
+    if (devMode) {
+      el.classList.add('editable-active');
+    } else {
+      el.classList.remove('editable-active');
+    }
+  });
+
+  alert(devMode ? '开发模式已开启：现在可以编辑内容' : '开发模式已关闭');
+};
+
+
+window.saveChanges = () => {
+  const content = {};
+  document.querySelectorAll('.editable').forEach((el, i) => {
+    content[`editable_${i}`] = el.innerText.trim();
+  });
+  console.log('Saved content:', content);
+  alert('内容已保存');
+
+  // Exit developer mode
+  devMode = false;
+  document.querySelectorAll('.editable').forEach(el => {
+    el.setAttribute('contenteditable', false);
+    el.classList.remove('editable-active');
+  });
+
+  // Download updated page as HTML
+  const docClone = document.documentElement.cloneNode(true);
+
+  // Remove <script> tag to prevent recursion or reexecution
+  docClone.querySelectorAll('script').forEach(s => s.remove());
+
+  const htmlContent = '<!DOCTYPE html>\n' + docClone.outerHTML;
+  const blob = new Blob([htmlContent], { type: 'text/html' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'updated_page.html';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+};
+

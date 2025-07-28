@@ -1,180 +1,151 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/fa62c117c7.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="styles.css" />
-    <title>ELearn</title>
-  </head>
-  <body class="light" id="top">
-    <header class="header center">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <title>星通云</title>
+</head>
+<body class="light" id="top">
+  <header class="header center">
+    <nav class="nav center">
+      <ul class="nav__list center">
+        <li class="nav__list-item"><a class="link link--nav" href="#projects">老师</a></li>
+        <li class="nav__list-item"><a class="link link--nav" href="#projects">公司介绍</a></li>
+        <li class="nav__list-item"><a class="link link--nav" href="#skills">服务</a></li>
+        <li class="nav__list-item"><a class="link link--nav" href="#contact">联系我们</a></li>
+      </ul>
+      <button type="button" aria-label="toggle theme" class="btn btn--icon">
+        <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+      </button>
+      <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger">
+        <i aria-hidden="true" class="fas fa-bars"></i>
+      </button>
+    </nav>
+    <div class="dev-controls center">
+      <button class="btn btn--plain" onclick="toggleDevMode()">开发模式</button>
+      <button class="btn btn--plain" onclick="saveChanges()">保存</button>
+    </div>
+  </header>
 
-      <nav class="nav center">
-        <ul class="nav__list center">
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#projects">老师</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#skills">服务</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#contact">联系我们</a>
-          </li>
-        </ul>
+  <!-- Developer Mode -->
 
-        <button type="button" aria-label="toggle theme" class="btn btn--icon">
-          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
-        </button>
 
-        <button
-          type="button"
-          aria-label="toggle navigation"
-          class="btn btn--icon nav__hamburger"
-        >
-          <i aria-hidden="true" class="fas fa-bars"></i>
-        </button>
-      </nav>
-    </header>
-
-    <main>
-      <!-- About -->
-      <div class="about center">
-        <h1>我们是 <span class="about__name">星通云</span></h1>
-        <h2 class="about__role">全球最大的留学申诉公司</h2>
-        <p class="about__desc">
-          我们把大山的孩子送进深山，百分百退学率
-        </p>
-
-        <div class="about__contact center">
-
-          <a
-            href="https://github.com/rjshkhr"
-            aria-label="github"
-            class="link link--icon"
-          >
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-
-          <a
-            href="https://linkedin.com/in/rjshkhr"
-            aria-label="linkedin"
-            class="link link--icon"
-          >
-            <i aria-hidden="true" class="fab fa-linkedin"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- Projects -->
-      <section id="projects" class="section projects">
-        <h2 class="section__title">老师</h2>
-
-        <div class="projects__grid">
-          <div class="project">
-            <h3>fkd</h3>
-            <p class="project__description">
-              浪费钱
-            </p>
-            <ul class="project__stack">
-              <li class="project__stack-item">Manchester University</li>
-              <li class="project__stack-item">本科</li>
-              <li class="project__stack-item">没毕业</li>
-            </ul>
-
-            <a
-              href="https://github.com"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-          </div>
-
-          <div class="project">
-            <h3>lzc</h3>
-            <p class="project__description">
-              选他这辈子完了
-            </p>
-            <ul class="project__stack">
-              <li class="project__stack-item">Manchester University</li>
-              <li class="project__stack-item">本科</li>
-              <li class="project__stack-item">没毕业</li>
-            </ul>
-
-            <a
-              href="https://github.com"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-          </div>
-
-          <div class="project">
-            <h3>dzy</h3>
-            <p class="project__description">
-              退学率百分百
-            </p>
-            <ul class="project__stack">
-              <li class="project__stack-item">Manchester University</li>
-              <li class="project__stack-item">本科</li>
-              <li class="project__stack-item">没毕业</li>
-            </ul>
-
-            <a
-              href="https://github.com"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Skills -->
-      <section class="section skills" id="skills">
-        <h2 class="section__title">服务</h2>
-        <ul class="skills__list">
-          <li class="skills__list-item btn btn--plain">留学申诉</li>
-          <li class="skills__list-item btn btn--plain">办理退学</li>
-          <li class="skills__list-item btn btn--plain">办理退休</li>
-          <li class="skills__list-item btn btn--plain">保证挂科</li>
-          <li class="skills__list-item btn btn--plain">绝不退款</li>
-        </ul>
-      </section>
-
-      <!-- Contact -->
-      <section class="section contact center" id="contact">
-        <h2 class="section__title">联系我们</h2>
-        <a href="mailto:rjshekhar.official@gmail.com">
-          <span class="btn btn--outline">发送邮件</span>
-        </a>
-      </section>
-    </main>
-
-    <footer class="footer">
-    </footer>
-
-    <div class="scroll-container">
-      <div class="scroll-top">
-        <a aria-label="Scroll up" href="#top">
-          <i aria-hidden="true" class="fas fa-arrow-up"></i>
-        </a>
+  <main>
+    <!-- About -->
+    <div class="about center">
+      <h1> <span class="about__name editable">星通云</span></h1>
+      <h2 class="about__role editable">内容一</h2>
+      <p class="about__desc editable">内容一</p>
+      <div class="about__contact center">
+        <a href="https://github.com/Jelly13124" class="link link--icon"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/rjshkhr" class="link link--icon"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
+    <!-- Projects -->
+    <section id="projects" class="section projects">
+      <h2 class="section__title">老师</h2>
+      <div class="projects__grid">
+        <div class="project">
+          <h3 class="editable">fkd</h3>
+          <p class="project__description editable">内容一</p>
+          <ul class="project__stack">
+            <li class="project__stack-item editable">Manchester University</li>
+            <li class="project__stack-item editable">本科</li>
+            <li class="project__stack-item editable">毕业</li>
+          </ul>
+          <a href="https://github.com" class="link link--icon"><i class="fab fa-github"></i></a>
+        </div>
 
-    <script src="./script.js"></script>
-  </body>
+        <div class="project">
+          <h3 class="editable">lzc</h3>
+          <p class="project__description editable">内容一</p>
+          <ul class="project__stack">
+            <li class="project__stack-item editable">Manchester University</li>
+            <li class="project__stack-item editable">本科</li>
+            <li class="project__stack-item editable">毕业</li>
+          </ul>
+          <a href="https://github.com" class="link link--icon"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="project">
+          <h3 class="editable">dzy</h3>
+          <p class="project__description editable">内容一</p>
+          <ul class="project__stack">
+            <li class="project__stack-item editable">Manchester University</li>
+            <li class="project__stack-item editable">本科</li>
+            <li class="project__stack-item editable">毕业</li>
+          </ul>
+          <a href="https://github.com" class="link link--icon"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="project">
+          <h3 class="editable">dzy</h3>
+          <p class="project__description editable">内容一</p>
+          <ul class="project__stack">
+            <li class="project__stack-item editable">Manchester University</li>
+            <li class="project__stack-item editable">本科</li>
+            <li class="project__stack-item editable">毕业</li>
+          </ul>
+          <a href="https://github.com" class="link link--icon"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="project">
+          <h3 class="editable">fkd</h3>
+          <p class="project__description editable">内容一</p>
+          <ul class="project__stack">
+            <li class="project__stack-item editable">Manchester University</li>
+            <li class="project__stack-item editable">本科</li>
+            <li class="project__stack-item editable">毕业</li>
+          </ul>
+          <a href="https://github.com" class="link link--icon"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="project">
+          <h3 class="editable">fkd</h3>
+          <p class="project__description editable">内容一</p>
+          <ul class="project__stack">
+            <li class="project__stack-item editable">Manchester University</li>
+            <li class="project__stack-item editable">本科</li>
+            <li class="project__stack-item editable">毕业</li>
+          </ul>
+          <a href="https://github.com" class="link link--icon"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section skills" id="skills">
+      <h2 class="section__title">服务</h2>
+      <ul class="skills__list">
+        <li class="skills__list-item btn btn--plain editable">内容一</li>
+        <li class="skills__list-item btn btn--plain editable">内容一</li>
+        <li class="skills__list-item btn btn--plain editable">内容一</li>
+        <li class="skills__list-item btn btn--plain editable">内容一</li>
+        <li class="skills__list-item btn btn--plain editable">内容一</li>
+        <li class="skills__list-item btn btn--plain editable">内容一</li>
+        <li class="skills__list-item btn btn--plain editable">内容一</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact center" id="contact">
+      <h2 class="section__title">联系我们</h2>
+      <a href="mailto:ruizheyuan6474@gmail.com">
+        <span class="btn btn--outline editable">发送邮件</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer"></footer>
+
+  <div class="scroll-container">
+    <div class="scroll-top">
+      <a href="#top"><i class="fas fa-arrow-up"></i></a>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
 </html>
