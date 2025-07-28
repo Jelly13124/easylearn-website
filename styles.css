@@ -361,6 +361,8 @@ main {
   font-size: 1.8rem;
   transition: transform 0.2s ease-in-out;
 }
+
+/* ✅ FIXED — apply to all screen sizes */
 .teacher-photo {
   width: 80px;
   height: 80px;
