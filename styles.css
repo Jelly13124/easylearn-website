@@ -361,6 +361,16 @@ main {
   font-size: 1.8rem;
   transition: transform 0.2s ease-in-out;
 }
+.teacher-photo {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 @media (max-width: 600px) {
   .header {
